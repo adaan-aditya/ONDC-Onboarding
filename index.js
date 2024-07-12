@@ -20,7 +20,7 @@ const htmlFile = `
   <head>
     <meta
       name="ondc-site-verification"
-      content="https://adaan.com/ondc-site-verification.html"
+      content="SIGNED_UNIQUE_REQ_ID"
     />
   </head>
   <body>
