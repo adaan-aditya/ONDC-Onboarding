@@ -60,13 +60,18 @@ app.post('/on_subscribe', function (req, res) {
 
 // Route for serving a verification file
 app.get('/ondc-site-verification.html', async (req, res) => {
-  console.log("Request ID->",REQUEST_ID)
-  console.log("Request ID->",SIGNING_PRIVATE_KEY)
-  const signedContent = await signMessage(REQUEST_ID, SIGNING_PRIVATE_KEY);
-  // Replace the placeholder with the actual value
-  const modifiedHTML = htmlFile.replace(/SIGNED_UNIQUE_REQ_ID/g, signedContent);
-  // Send the modified HTML as the response
-  res.send(modifiedHTML);
+  try {
+    console.log("Request ID->",REQUEST_ID)
+    console.log("Request ID->",SIGNING_PRIVATE_KEY)
+    const signedContent = await signMessage(REQUEST_ID, SIGNING_PRIVATE_KEY);
+    // Replace the placeholder with the actual value
+    const modifiedHTML = htmlFile.replace(/SIGNED_UNIQUE_REQ_ID/g, signedContent);
+    // Send the modified HTML as the response
+    res.send(modifiedHTML);  
+  } catch (error) {
+    res.status(400).json("error->",error)
+  }
+  
 });
 
 // Default route
