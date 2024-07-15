@@ -11,7 +11,7 @@ const ONDC_PUBLIC_KEY =
   'MCowBQYDK2VuAyEAduMuZgmtpjdCuxv+Nc49K0cB6tL/Dj3HZetvVN7ZekM=';
 const REQUEST_ID = '27baa06d-f90a-486c-85e5-cc621b787f04';
 const SIGNING_PRIVATE_KEY =
-  'aWZrrMT7tjgXzwbd/WVjUUz0D1V0+CD0xMA0SwCzyOLmnPlZUdYpX0VmqGQZEw2Et71ZvBP7LXDQrqTIS2eVig==';
+  'aWZrrMT7tjgXzwbd/WVjUUz0D1V0+CDxMA0SwCzyOLmnP1ZUdYpX0VmqGQZEw2Et71ZvBP7LXDQrqTIS2eVig==';
 
 const htmlFile = `
 <!--Contents of ondc-site-verification.html. -->
